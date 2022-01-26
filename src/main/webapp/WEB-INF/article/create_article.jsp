@@ -1,5 +1,6 @@
 <%@page import="beans.Utilisateur"%>
 <%@page import="beans.Article"%>
+<%@page import="beans.Categorie"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -11,7 +12,9 @@
 </head>
 <body>
 	<h1>Ajouter un article</h1>
-	<a href="/BlogDemoFormation/utilisateurs">Voir les utilisateurs</a>
+	<a href="/Exercice3/utilisateurs">Voir les utilisateurs</a>
+	<br>
+	<a href="/Exercice3/categories">Ajouter une catégorie</a>
 	<br>
 	<%@ include file="/WEB-INF/generic/message.jsp" %>
 	<form action="" method="post">
@@ -30,13 +33,14 @@
 		<input type="text" id="contenu" name="contenu">
 		<br>
 		<br>
-		<label for="auteur">Auteur : </label>
+		
+		<label for="categorie">Catégorie : </label>
 		<br>
-		<select name="auteur">
+		<select name="categorie">
 			<%
-				List<Utilisateur> auteurs = (List<Utilisateur>) request.getAttribute("auteurs");
-				for (Utilisateur auteur: auteurs) {
-					out.println("<option value=\""+ auteur.getEmail() +"\">"+auteur.getNom()+" "+ auteur.getPrenom()+"</option>");
+				List<Categorie> categories = (List<Categorie>) request.getAttribute("categories");
+				for (Categorie categorie: categories) {
+					out.println("<option value=\"" + categorie.getTitre() + "\">" + categorie.getTitre() + "</option>");
 				}
 			%>
 		</select>

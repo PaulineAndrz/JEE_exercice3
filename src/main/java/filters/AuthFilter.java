@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebFilter(urlPatterns = {"/utilisateurs", "/articles"})
+@WebFilter(urlPatterns = {"/utilisateurs", "/articles", "/categories"})
 public class AuthFilter extends HttpFilter {
 
 	@Override

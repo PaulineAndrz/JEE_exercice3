@@ -10,7 +10,10 @@
 </head>
 <body>
 	<h1>Ajouter un utilisateur</h1>
-	<a href="/BlogDemoFormation/articles">Voir les articles</a>
+	<a href="/Exercice3/articles">Voir les articles</a>
+	<br>
+	<a href="/Exercice3/categories">Ajouter une catégorie</a>
+	<br>
 	<br>
 	<%@ include file="/WEB-INF/generic/message.jsp" %>
 	<form action="" method="post">
